@@ -36,7 +36,7 @@
     .hero-banner-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(15,25,35,0.72) 0%, rgba(15,25,35,0.15) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 3rem 4rem; }
     .hero-eyebrow { font-family: var(--body); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #7EE8B8; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.75rem; }
     .hero-eyebrow::before { content: ''; display: inline-block; width: 2rem; height: 3px; border-radius: 2px; background: #7EE8B8; }
-    .hero-banner-overlay h1 { font-family: var(--display); font-size: clamp(2.8rem, 5vw, 4.8rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+    .hero-banner-overlay h1 { font-family: var(--display); font-size: clamp(2.8rem, 5vw, 4.8rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
     .hero-banner-overlay h1 em { font-style: normal; color: #FFD97A; }
     .hero-desc { font-size: 1rem; color: #ffffff; font-weight: 600; max-width: 480px; margin-bottom: 1.8rem; line-height: 1.7; text-shadow: 0 1px 6px rgba(0,0,0,0.4); }
     .btn-primary { display: inline-block; padding: 0.8rem 2rem; background: #fff; color: var(--ink); text-decoration: none; font-family: var(--body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 100px; border: none; cursor: pointer; transition: background 0.2s, transform 0.1s; }
@@ -44,10 +44,10 @@
 
     .intro-strip { padding: 5rem 4rem; border-bottom: 2px solid var(--ink); display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
     .section-label { font-family: var(--body); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); padding-top: 0.4rem; }
-    .intro-body h2 { font-family: var(--display); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
+    .intro-body h2 { font-family: var(--display); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
     .intro-body h2 em { font-style: normal; color: var(--blue); background: var(--blue-light); padding: 0 0.15em; border-radius: 5px; }
     .intro-body p { font-size: 1rem; color: var(--ink-muted); max-width: 580px; margin-bottom: 1rem; }
-    .stats-row { display: flex; gap: 3rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 2px solid var(--ink-faint); justify-content: center; }
+    .stats-row { display: flex; gap: 3rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 2px solid var(--ink-faint); justify-content: center; width: 100%; }
     .stat-item { display: flex; flex-direction: column; gap: 0.3rem; align-items: center; text-align: center; }
     .stat-number { font-family: var(--display); font-size: 2.6rem; font-weight: 800; line-height: 1; }
     .stat-item:nth-child(1) .stat-number { color: var(--red); }
@@ -252,7 +252,9 @@
     <!-- RIGHT: tip + ko-fi -->
     <div class="fade-in">
       <p class="tip-text" style="margin-top:0;">I make these illustrations because I genuinely love it. Getting to learn alongside doctors and researchers is the whole point, and I never charge upfront for that. That said, each piece can take anywhere from hours to days, and if my work has been useful to you, or you just want to say thanks, a small tip goes a long way. No obligation at all, just always appreciated!</p>
-      <iframe id='kofiframe' src='https://ko-fi.com/nihap/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;margin-top:1.2rem;border-radius:10px;' height='712' title='nihap'></iframe>
+      <div style="margin-top:1.2rem;">
+  <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js' onload="kofiwidget2.init('Buy me a coffee!', '#a15ce6', 'C0C32BI91');kofiwidget2.draw();"></script>
+</div>
     </div>
   </section>
 
