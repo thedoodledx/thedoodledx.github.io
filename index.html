@@ -98,10 +98,11 @@
     footer a:hover { color: var(--red); }
 
     @media (max-width: 900px) {
-      nav { padding: 1.1rem 1.5rem; }
-      .nav-logo { font-size: 0.85rem; }
-      .nav-links { gap: 1.2rem; }
-      #home { margin-top: 110px; }
+      nav { padding: 0.8rem 1.2rem; }
+      .nav-logo { font-size: 0.75rem; }
+      .nav-links { gap: 0.8rem; }
+      .nav-links a { font-size: 0.72rem; }
+      #home { margin-top: 0px; }
       .hero-banner-img { height: 340px; }
       .hero-banner-overlay { padding: 2rem 1.5rem; }
       .intro-strip { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 1.5rem; }
@@ -275,6 +276,15 @@
   </footer>
 
   <script>
+    // Dynamically match hero top margin to actual nav height
+    function fixHeroMargin() {
+      const nav = document.querySelector('nav');
+      const home = document.getElementById('home');
+      if (nav && home) home.style.marginTop = nav.offsetHeight + 'px';
+    }
+    fixHeroMargin();
+    window.addEventListener('resize', fixHeroMargin);
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
