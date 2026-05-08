@@ -6,6 +6,14 @@
   <title>Niharika Praveen · Medical Illustration</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DXTTF023D3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DXTTF023D3');
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -30,7 +38,7 @@
     .hero-eyebrow::before { content: ''; display: inline-block; width: 2rem; height: 3px; border-radius: 2px; background: #7EE8B8; }
     .hero-banner-overlay h1 { font-family: var(--display); font-size: clamp(2.8rem, 5vw, 4.8rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
     .hero-banner-overlay h1 em { font-style: normal; color: #FFD97A; }
-    .hero-desc { font-size: 1rem; color: rgba(255,255,255,0.82); max-width: 480px; margin-bottom: 1.8rem; line-height: 1.7; }
+    .hero-desc { font-size: 1rem; color: #ffffff; font-weight: 600; max-width: 480px; margin-bottom: 1.8rem; line-height: 1.7; text-shadow: 0 1px 6px rgba(0,0,0,0.4); }
     .btn-primary { display: inline-block; padding: 0.8rem 2rem; background: #fff; color: var(--ink); text-decoration: none; font-family: var(--body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 100px; border: none; cursor: pointer; transition: background 0.2s, transform 0.1s; }
     .btn-primary:hover { background: var(--red); color: #fff; transform: translateY(-2px); }
 
@@ -69,11 +77,8 @@
     #contact { padding: 6rem 4rem; border-bottom: 2px solid var(--ink); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
     .contact-intro h2 { font-family: var(--display); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
     .contact-intro h2 em { font-style: normal; color: var(--green); background: var(--green-light); padding: 0 0.15em; border-radius: 5px; }
-    .contact-intro p { font-size: 1rem; color: var(--ink-muted); max-width: 400px; margin-bottom: 2rem; }
-    .contact-detail { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1.5rem; }
-    .contact-detail a { display: flex; align-items: center; gap: 0.75rem; color: var(--ink-muted); text-decoration: none; font-family: var(--body); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
-    .contact-detail a:hover { color: var(--red); }
-    .cd-label { width: 4.5rem; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-faint); }
+    .contact-intro p { font-size: 1rem; color: var(--ink-muted); max-width: 400px; margin-bottom: 1rem; }
+    .tip-text { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.8; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 2px solid var(--ink-faint); }
     .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
     .field-group { display: flex; flex-direction: column; gap: 0.4rem; }
     .field-group label { font-family: var(--body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); }
@@ -108,16 +113,6 @@
     .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXTTF023D3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DXTTF023D3');
-</script>
-
 </head>
 <body>
 
@@ -222,11 +217,10 @@
   </div>
 
   <section id="contact">
-    <div class="contact-intro fade-in">
-      <h2>Let's work<br><em>together</em></h2>
-      <p>Interested in commissioning a piece, or want to discuss a project? I'd love to hear from you.</p>
-    </div>
+    <!-- LEFT: form -->
     <div class="fade-in">
+      <h2 style="font-family:var(--display);font-size:clamp(2rem,3.5vw,3.2rem);font-weight:800;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.2rem;">Let's work<br><em style="font-style:normal;color:var(--green);background:var(--green-light);padding:0 0.15em;border-radius:5px;">together</em></h2>
+      <p style="font-size:1rem;color:var(--ink-muted);margin-bottom:1.5rem;">Interested in commissioning a piece, or want to discuss a project? I'd love to hear from you.</p>
       <div data-fs-success class="form-success"><p>✓ Message sent! I'll get back to you soon.</p></div>
       <div data-fs-error class="form-error"></div>
       <form id="contact-form" class="contact-form">
@@ -254,11 +248,17 @@
         </div>
       </form>
     </div>
+
+    <!-- RIGHT: tip + ko-fi -->
+    <div class="fade-in">
+      <p class="tip-text" style="margin-top:0;">I make these illustrations because I genuinely love it. Getting to learn alongside doctors and researchers is the whole point, and I never charge upfront for that. That said, each piece can take anywhere from hours to days, and if my work has been useful to you, or you just want to say thanks, a small tip goes a long way. No obligation at all, just always appreciated!</p>
+      <iframe id='kofiframe' src='https://ko-fi.com/nihap/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;margin-top:1.2rem;border-radius:10px;' height='712' title='nihap'></iframe>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 Niharika Praveen · Medical Illustration</p>
-    <p><a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+    <p><a href="https://github.com/thedoodledx" target="_blank">GitHub</a></p>
   </footer>
 
   <script>
